@@ -34,7 +34,7 @@ class TaskTable
         return $row;
     }
 
-    public function saveTask(Album $task)
+    public function saveTask(Task $task)
     {
         $data = array(
             'title'         => $task->title,

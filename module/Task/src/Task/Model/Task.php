@@ -92,4 +92,16 @@ class Task
         $this->inputFilter = $inputFilter;
         return $this->inputFilter;
     }
+
+    public function getArrayCopy()
+    {
+        return [
+            'id'            => $this->id,
+            'title'         => $this->title,
+            'description'   => $this->description,
+            'creation_date' => $this->creation_date,
+            'status'        => $this->status,
+
+        ];
+    }
 }
