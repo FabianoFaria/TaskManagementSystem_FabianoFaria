@@ -10,6 +10,7 @@ namespace Application;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
+use Task\Controller\TaskController;
 
 return [
     'router' => [
@@ -19,7 +20,7 @@ return [
                 'options' => [
                     'route'    => '/',
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
+                        'controller' => TaskController::class, //Controller\IndexController::class,
                         'action'     => 'index',
                     ],
                 ],

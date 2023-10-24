@@ -23,14 +23,16 @@
         "psr-0": { "Task": "module/Task/src/" },
         "psr-4": {
             "Application\\": "module/Application/src/",
-            "Task\\": "module/Task/"
+            "Task\\": "module/Task/",
+            "TaskTest\\": "module/Task/test/"
         }
     },
     "autoload-dev": {
         "psr-0": { "Task": "module/Task/src/" },
         "psr-4": {
             "ApplicationTest\\": "module/Application/test/",
-            "Task\\": "module/Task/"
+            "Task\\": "module/Task/",
+            "TaskTest\\": "module/Task/test/"
         }
     },
     "scripts": {
@@ -45,5 +47,9 @@
         ],
         "serve": "php -S 0.0.0.0:8080 -t public",
         "test": "phpunit"
+    },
+    "require-dev": {
+        "zendframework/zend-test": "^3.3",
+        "phpspec/prophecy": "^1.17"
     }
 }

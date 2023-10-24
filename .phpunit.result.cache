@@ -1,0 +1,1 @@
+{"version":1,"defects":{"TaskTest\\Controller\\TaskControllerTest::testIndexActionCanBeAccessed":3,"TaskTest\\Controller\\TaskControllerTest::testAddActionRedirectsAfterValidPost":3},"times":{"TaskTest\\Controller\\TaskControllerTest::testIndexActionCanBeAccessed":0.151,"TaskTest\\Controller\\TaskControllerTest::testAddActionRedirectsAfterValidPost":0.02}}

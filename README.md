@@ -34,6 +34,27 @@ php composer.phar self-update
 
 php composer.phar install
 
+## Deploy
+
+Para fazer o deploy desse projeto rode
+
+```bash
+  php -S 0.0.0.0:8080 -t public public/index.php
+```
+
+## Unit Test
+
+Para rodar os testes unitarios
+
+```bash
+  ./vendor/bin/phpunit
+```
+
+Para rodar testes unitarios espacificos
+
+```bash
+  ./vendor/bin/phpunit --testsuite { Modulo desejado }
+```
 
 ## Autor
 
@@ -42,6 +63,8 @@ php composer.phar install
 
 ## Referência
 
- - [Zend Framework 2 documentation](https://zf2-documentation-br.readthedocs.io/pt/latest/ref/overview.html)
- - [Composer documentation](https://getcomposer.org/doc/)
- - ["Module (User) could not be initialized" : Exception in Zend Framework 2](https://stackoverflow.com/questions/43343437/module-user-could-not-be-initialized-exception-in-zend-framework-2)
+- [Zend Framework 2 documentation](https://zf2-documentation-br.readthedocs.io/pt/latest/ref/overview.html)
+- [Composer documentation](https://getcomposer.org/doc/)
+- [docs.zendframework.com](https://docs.zendframework.com/tutorials/getting-started/overview/)
+- ["Module (User) could not be initialized" : Exception in Zend Framework 2](https://stackoverflow.com/questions/43343437/module-user-could-not-be-initialized-exception-in-zend-framework-2)
+- [php fatal error Declaration of UserTest setUp function](https://stackoverflow.com/questions/58393289/php-fatal-error-declaration-of-usertest-setup-function)
