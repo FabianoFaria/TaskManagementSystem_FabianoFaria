@@ -56,6 +56,22 @@ Para rodar testes unitarios espacificos
   ./vendor/bin/phpunit --testsuite { Modulo desejado }
 ```
 
+## Mysql
+
+Estrutura da tabela `tarefas` 
+
+```bash
+CREATE TABLE `tarefas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `creation_date` datetime NOT NULL,
+  `status` smallint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1
+```
+
+
 ## Autor
 
 - [@FabianoFaria](https://github.com/FabianoFaria)
