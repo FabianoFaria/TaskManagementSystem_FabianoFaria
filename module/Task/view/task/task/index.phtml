@@ -1,0 +1,53 @@
+<?php
+use Zend\I18n\View\Helper\DateFormat;
+
+$title = 'My tasks';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<p>
+    <a href="<?php echo $this->url('task', array('action'=>'add'));?>">Add new task</a>
+</p>
+
+<table class="table">
+<tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Creation date</th>
+    <th>Status</th>
+    <th>&nbsp;</th>
+</tr>
+<?php foreach ($tasks as $task) : ?>
+<tr>
+    <td><?php echo $this->escapeHtml($task->title);?></td>
+    <td><?php echo $this->escapeHtml($task->description);?></td>
+    <td>
+        <?php
+            $dateTime       = new \DateTime($task->creation_date);
+            $format         = DateFormat::PATTERN_MEDIUM;
+            $dateFormatter  = new DateFormat();
+            $formattedDate  = $dateFormatter($dateTime, $format);
+            echo $this->escapeHtml($formattedDate);
+        ?>
+    </td>
+    
+    <?php
+        if($task->status){
+    ?>
+        <td>Completed</td>
+    <?php
+        }else{
+    ?>
+        <td>Pending</td>
+    <?php
+        }
+    ?>
+    <td>
+        <a href="<?php echo $this->url('task',
+            array('action'=>'edit', 'id' => $task->id));?>">Edit</a>
+        <a href="<?php echo $this->url('album',
+            array('action'=>'delete', 'id' => $task->id));?>">Delete</a>
+    </td>
+</tr>
+<?php endforeach; ?>
+</table>

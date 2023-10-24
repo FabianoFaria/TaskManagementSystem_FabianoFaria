@@ -22,10 +22,16 @@ Devido incompatibilidade com a versão atual do Composer (2.6.4), foi necessári
 
 
 Ainda devido a problemas de incompatibilidade com a versão atual do Composer (2.6.4), foi necessário utilizar o seguitne método de instalação:
-cd my/project/dir
+
+
+cd wamp64/www/TaskManagementSystem_FabianoFaria
+
 git clone git://github.com/zendframework/ZendSkeletonApplication.git
+
 cd ZendSkeletonApplication
+
 php composer.phar self-update
+
 php composer.phar install
 
 
@@ -38,3 +44,4 @@ php composer.phar install
 
  - [Zend Framework 2 documentation](https://zf2-documentation-br.readthedocs.io/pt/latest/ref/overview.html)
  - [Composer documentation](https://getcomposer.org/doc/)
+ - ["Module (User) could not be initialized" : Exception in Zend Framework 2](https://stackoverflow.com/questions/43343437/module-user-could-not-be-initialized-exception-in-zend-framework-2)
